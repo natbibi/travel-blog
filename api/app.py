@@ -16,7 +16,7 @@ mail_settings = {
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": os.getenv("MAIL_USERNAME"),
     "MAIL_PASSWORD": os.getenv("MAIL_PASSWORD"),
-    "MAIL_DEFAULT_SENDER":'natalie.wuwu@googlemail.com'
+    "MAIL_DEFAULT_SENDER": os.getenv("MAIL_USERNAME")
 }
 
 app.config.update(mail_settings)
