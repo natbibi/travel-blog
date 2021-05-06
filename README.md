@@ -38,10 +38,17 @@ To run API test suite:
 
 ## Process 
 1. Create a front end in react with a previously made react template repo
-2. Create a back end with flask in Python
+2. Create a back end with flask in Python 
+3. Set up route for /mailinglist
+4. Install flask-mail and create welcome template for new subscribers
 
 
 ## Bugs
+- [x] unable to set up flask-mail with my personal email account
+    - on gmail settings: allow less secure apps
+    - use app password for google 
+    - tried different email service (yahoo)
+    - SOLVED!! The issue was with python-dotenv -.-
 
 ## Changelog
 
