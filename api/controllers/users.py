@@ -1,5 +1,9 @@
 users = [
-    {"email": "nat@nat.com"}
+    { 
+    "id": 1, 
+    "name": "Natalie", 
+    "email": "nat@nat.com"
+    }
 ]
 
 def index(req):
