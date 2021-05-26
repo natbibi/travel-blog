@@ -1,11 +1,10 @@
-import axios from 'axios'
 import React from 'react'
 
-const Destinations = ({destinationData}) => {
+const Destinations = ({ destinationData }) => {
 
     return (
         <div className="img-container">
-            <h5>{destinationData.destination}, {destinationData.country}</h5>
+            <h5>{destinationData.city}, {destinationData.country}</h5>
             <img className="destination" src={destinationData.image} />
             
         </div>

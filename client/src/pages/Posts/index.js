@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Destinations } from '../../components'
-import destinationData from './data'
-
+import axios from 'axios';
 
 const Posts = () => {
+    const [destination, setDestination] = useState([])
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-    const [destination, setDestination] = useState(destinationData)
+    useEffect(() => {
+        const fetchDestinations = async () => {
+            setLoading(true)
+            try {
+                const { data } = await axios.get("https://nat-api.herokuapp.com/destinations/")
+                setDestination(data)
+                setLoading(false)
+            } catch (err) {
+                setError("Sorry, there's been error")
+            }
+        }
+        fetchDestinations()
+    }, []);
 
     const renderDestinations = destination.map(d =>
         <Destinations destinationData={d} key={d.id} />
@@ -14,11 +28,13 @@ const Posts = () => {
     return (
         <>
             <header className="intro-container">
-                <h1>Posts!</h1>
+                <h1>Photos from my trips...</h1>
             </header>
 
-            <main>
-           {renderDestinations}
+            <main> 
+                {loading ? <p className="main-container">loading... please wait or refresh </p> : 
+                <div>{renderDestinations} </div>}
+                {error && <p className="main-container">sorry, please try again!</p>}
             </main>
         </>
     )
