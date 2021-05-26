@@ -1,4 +1,5 @@
 import React from 'react';
+import { JoinForm, SocialIcons } from '../../components';
 import selfie from '../../images/selfie.jpg'
 
 const About = () => {
@@ -15,6 +16,7 @@ const About = () => {
                     When travelling I love to immerse myself in local culture by eating the local cuisine, learning basic phrases of the local language, and learning their history by visiting museums and cultural destinations.</p>
 
                     <p>Upcoming destinations: Jordan, Las Vegas </p>
+                    <SocialIcons />
                 </div>
                 <img className="profile" src={selfie} />
             </main>
