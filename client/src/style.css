@@ -38,8 +38,8 @@ img.profile {
 }
 
 img.destination {
-    width: 280px;
-    height: 280px;
+    width: auto;
+    height: 200px;
 }
 
 input {

@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
-function JoinForm({subscribe}) {
+function JoinForm({ subscribe }) {
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:8000/mailinglist', {email: email, name: name})
+        await axios.post('http://localhost:8000/mailinglist', { email: email, name: name })
         setName("")
         setEmail("")
         subscribe(true)
@@ -26,16 +26,15 @@ function JoinForm({subscribe}) {
 
     return (
         <>
-        <form onSubmit={handleSubmit} role="join-mailing-list">
-            <p>Join my mailing list:</p>
-            <label>Name:
+            <form onSubmit={handleSubmit} role="join-mailing-list">
+                <label>Name:
             <input type="text" value={name} onChange={updateName} />
-            </label>
-            <label>Email:
+                </label>
+                <label>Email:
             <input type="text" value={email} onChange={updateEmail} />
-            </label>
-            <button type="submit">Join!</button>
-        </form>
+                </label>
+                <button type="submit">Join!</button>
+            </form>
         </>
     )
 }
