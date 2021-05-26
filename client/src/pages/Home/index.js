@@ -12,10 +12,15 @@ const Home = () => {
     return (
         <>
             <header className="intro-container">
-                <h1>Home</h1>
-                {subscribed ? <p>Thank you 💖 Look out for updates from me!</p> : <JoinForm subscribe={subscribe} />}
-
+                <h1>Natalie's Travel Blog</h1>
             </header>
+            <main className="main-container" id="homepage">
+                <p style={{ width: "60%", margin: "2rem" }}>Hey there! Thank you for checking out my personal blog for my travels. I'm slowly adding in details of my previous travels. 
+                    Feel free to join my mailing list where I send any updates of my travels: </p>
+                <div>
+                    {subscribed ? <p>Thank you 💖 Look out for updates from me!</p> : <JoinForm subscribe={subscribe} />}
+                </div>
+            </main>
         </>
     )
 }
