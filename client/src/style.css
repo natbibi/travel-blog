@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+
+body {
+    font-family: 'Padauk', sans-serif;
+}
+
+.intro-container {
+    margin: 2rem;
+}
+
+.main-container {
+    display: flex; 
+    justify-content: center;
+    margin: 3rem;
+}
+
+#about {
+    text-align: justify;
+    justify-content: space-evenly;
+}
+
+.about-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+img.profile {
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.img-container {
+    display: inline-block;
+    margin: 1rem;
+}
+
+img.destination {
+    width: 280px;
+    height: 280px;
+}
+
+input {
+    margin: .5rem;
+}
