@@ -16,7 +16,10 @@ mail_settings = {
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": os.getenv("MAIL_USERNAME"),
     "MAIL_PASSWORD": os.getenv("MAIL_PASSWORD"),
-    "MAIL_DEFAULT_SENDER": os.getenv("MAIL_USERNAME")
+    "MAIL_DEFAULT_SENDER": os.getenv("MAIL_USERNAME"),
+
+    # suppress mail sending during dev
+    "MAIL_SUPPRESS_SEND": True
 }
 
 app.config.update(mail_settings)
@@ -44,6 +47,3 @@ def users_handler():
         msg.body = f"Thank you for joining the mailing list, {resp['name']}!"
         mail.send(msg)
     return jsonify(resp), code
-
-if __name__ == '__main__':
-    create_app()
