@@ -6,7 +6,7 @@ const Destinations = ({destinationData}) => {
     return (
         <div className="img-container">
             <h5>{destinationData.destination}, {destinationData.country}</h5>
-            <img src={destinationData.image} />
+            <img className="destination" src={destinationData.image} />
             
         </div>
     )
