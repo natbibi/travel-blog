@@ -28,10 +28,10 @@ function JoinForm({subscribe}) {
         <>
         <form onSubmit={handleSubmit} role="join-mailing-list">
             <p>Join my mailing list:</p>
-            <label>Name
+            <label>Name:
             <input type="text" value={name} onChange={updateName} />
             </label>
-            <label>Email
+            <label>Email:
             <input type="text" value={email} onChange={updateEmail} />
             </label>
             <button type="submit">Join!</button>
