@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 
 function JoinForm({ subscribe }) {
 
@@ -8,7 +7,7 @@ function JoinForm({ subscribe }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:8000/mailinglist', { email: email, name: name })
+        await axios.post('https://nat-api.herokuapp.com/mailinglist/', { email: email, name: name })
         setName("")
         setEmail("")
         subscribe(true)
