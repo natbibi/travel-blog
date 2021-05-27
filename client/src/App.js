@@ -22,8 +22,8 @@ function App(){
           <Route path="/visited">
             <Pages.Visited />
               </Route>
-          <Route path="/posts">
-            <Pages.Posts />
+          <Route path="/Photos">
+            <Pages.Photos />
           </Route>
           <Route>
             <Pages.NotFound />

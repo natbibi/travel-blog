@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Destinations, ScrollToTop } from '../../components'
 import axios from 'axios';
 
-const Posts = () => {
+const Photos = () => {
     const [destination, setDestination] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -42,4 +42,4 @@ const Posts = () => {
     )
 }
 
-export default Posts;
+export default Photos;
