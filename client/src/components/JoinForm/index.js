@@ -5,13 +5,21 @@ function JoinForm({ subscribe }) {
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
+    const [error, setError] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('https://nat-api.herokuapp.com/mailinglist/', { email: email, name: name })
-        setName("")
-        setEmail("")
-        subscribe(true)
+        try {
+            const options = {
+                headers: { "Authorization": `Token 5c2831cea3a84a93dfc042fcd3476b670c374d2d` }
+            };
+            await axios.post('https://nat-api.herokuapp.com/mailinglist/', { email: email, name: name }, options)
+            setName("")
+            setEmail("")
+            subscribe(true)
+        } catch (err) {
+            setError("sorry, please try again!")
+        }
     }
 
     const updateName = e => {
@@ -35,6 +43,7 @@ function JoinForm({ subscribe }) {
                 </label>
                 <button type="submit">Join!</button>
             </form>
+            {error && <p>🚧<em>{error}</em></p>}
         </>
     )
 }
