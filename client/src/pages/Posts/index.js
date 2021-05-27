@@ -16,7 +16,7 @@ const Posts = () => {
                 setLoading(false)
             } catch (err) {
                 setLoading(false)
-                setError("Sorry, there's been error")
+                setError(err)
             }
         }
         fetchDestinations()
