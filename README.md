@@ -20,9 +20,6 @@ To start client:
     - `npm run dev`  
 The client will open on port 8080   
 
-To run API test suite:      
-    `pipenv run test`  
-
 ## Technologies  
 - HTML, CSS, JavaScript, Python   
 
@@ -45,9 +42,9 @@ To run API test suite:
 6. Render sample destination data and work out general layout of pages  
 
 ### TODOS
-- [ ] convert mail to link to django mail
+- [x] convert mail to link to django mail
 - [x] change from sample data to fetch from personal API
-- [ ] seed data with images 
+- [x] seed data with images 
 - [x] add social icons
 - [ ] deploy! 
 
@@ -79,31 +76,3 @@ To run API test suite:
 
 ### Challenges
 - Took some time to understand flask-mail and using dotenv with Python
-
-## Future Features 
-??
-
-
-
-
-
-
-## For development:  
-`npm install`  
-`npm run dev`  
-
-## For production:  
-`npm run build`   
-`touch netlify.toml`  
-
-    # in netlify.toml
-      
-    [build]  
-        command = "npm run build" # how to trigger a build  
-        publish = "/build" # what folder to publish    
-    [[redirects]]   
-        from = "/*" # redirect any path  
-        to = "/index.html" # to this html page   
-        status = 200 # with this status   
-       
- Deploy as usual on Netlify!
