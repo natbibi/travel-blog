@@ -31,9 +31,9 @@ const Posts = () => {
                 <h1>Photos from my trips...</h1>
             </header>
 
-            <main> 
+            <main id="photos"> 
                 {loading ? <p className="main-container">loading... please wait or refresh </p> : 
-                <div>{renderDestinations} </div>}
+                <>{renderDestinations} </>}
                 {error && <p className="main-container">sorry, please try again!</p>}
             </main>
         </>

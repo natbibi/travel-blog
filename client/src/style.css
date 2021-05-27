@@ -26,6 +26,14 @@ body {
     justify-content: space-evenly;
 }
 
+main#photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
 .about-text {
     width: 40%;
     display: flex;
@@ -41,12 +49,13 @@ img.profile {
 
 .img-container {
     display: inline-block;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 img.destination {
     width: auto;
-    height: 200px;
+    height: 270px;
+    border-radius: 5px;
 }
 
 input {
