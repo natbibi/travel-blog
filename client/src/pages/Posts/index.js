@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Destinations } from '../../components'
+import { Destinations, ScrollToTop } from '../../components'
 import axios from 'axios';
 
 const Posts = () => {
@@ -35,6 +35,7 @@ const Posts = () => {
                 {loading ? <p className="main-container">loading... please wait or refresh </p> : 
                 <>{renderDestinations} </>}
                 {error && <p className="main-container">sorry, please try again!</p>}
+                <ScrollToTop />
             </main>
         </>
     )

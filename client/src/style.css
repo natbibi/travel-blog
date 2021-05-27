@@ -66,3 +66,31 @@ form {
     border: lightgrey 1px solid;
     padding: 0.5rem;
 }
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2rem;
+    margin-right: 0.5rem;
+}
+
+button.scroll-up {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    margin-bottom: 10px;
+    animation: hover-vertical 2s ease infinite;
+    position: relative;
+    color: rgb(131, 36, 255);
+}
+
+@keyframes hover-vertical {
+    0%, 100% {
+      top: 0;
+    }
+  
+    50% {
+      top: 20px;
+    }
+}
