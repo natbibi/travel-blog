@@ -22,8 +22,8 @@ const Photos = () => {
         fetchDestinations()
     }, []);
 
-    const renderDestinations = destination.map(d =>
-        <Destinations destinationData={d} key={d.id} />
+    const renderDestinations = destination.map((d,i) =>
+        <Destinations destinationData={d} key={i} />
     );
 
     return (
