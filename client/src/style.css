@@ -156,8 +156,7 @@ button.see-about {
     }
 
     #homepage p {
-        width: 100%;
-        margin: 0.5rem;
+        width: 90%;
         margin-bottom: 3rem;
     }
     
@@ -176,5 +175,9 @@ button.see-about {
 
     form button {
         margin-top: 0.5rem;
+    }
+
+    h5, p, section {
+        padding: 2rem;
     }
 }
