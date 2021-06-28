@@ -41,6 +41,8 @@ body {
 
 #visited {
     animation: visited-load ease-in 300ms;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes about-load {
@@ -73,7 +75,7 @@ main#photos {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 2rem;
-    animation: intro-load ease-in 300ms;
+    animation: about-load ease-in 300ms;
 }
 
 h5, p {
@@ -124,7 +126,7 @@ form {
     margin-right: 0.5rem;
 }
 
-button.scroll-up, button.see-about, button.see-visited {
+button.scroll-up, button.see-about, button.see-visited, button.see-photos {
     cursor: pointer;
     font-size: 2rem;
     border: none;
@@ -134,7 +136,7 @@ button.scroll-up, button.see-about, button.see-visited {
     color: rgb(131, 36, 255);
 }
 
-button.scroll-up, button.see-about {
+button.scroll-up, button.see-about, button.see-photos {
     animation: hover-vertical 2s ease infinite;
 }
 
