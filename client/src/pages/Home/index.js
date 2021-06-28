@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { JoinForm } from '../../components'
+import { BiDownArrow } from "react-icons/bi";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
+
+    const history = useHistory();
 
     const [subscribed, setSubscribed] = useState(false)
 
@@ -20,6 +24,7 @@ const Home = () => {
                 <div>
                     {subscribed ? <p>Thank you 💖 Look out for updates from me!</p> : <JoinForm subscribe={subscribe} />}
                 </div>
+                <button className="see-about" onClick={() => history.push('/about')}><BiDownArrow /></button>
             </main>
         </>
     )

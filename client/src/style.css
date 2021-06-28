@@ -36,7 +36,20 @@ body {
 #about {
     text-align: justify;
     align-items: center;
+    animation: intro-load ease-in 300ms;
 }
+
+@keyframes intro-load {
+    0% {
+      transform: translateY(-400px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 
 main#photos {
     display: flex;
@@ -94,7 +107,8 @@ form {
     margin-right: 0.5rem;
 }
 
-button.scroll-up {
+button.scroll-up, button.see-about {
+    cursor: pointer;
     font-size: 2rem;
     border: none;
     background: none;
@@ -102,6 +116,10 @@ button.scroll-up {
     animation: hover-vertical 2s ease infinite;
     position: relative;
     color: rgb(131, 36, 255);
+}
+
+button.see-about {
+    margin-top: 4rem;
 }
 
 @keyframes hover-vertical {
