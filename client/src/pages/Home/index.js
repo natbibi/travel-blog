@@ -19,12 +19,12 @@ const Home = () => {
                 <h1 hidden>Natalie's Travel Blog</h1>
             </header>
             <main className="main-container" id="homepage">
-                <p>Hey there! Thank you for checking out my personal blog for my travels. I'm slowly adding in details of my previous travels. 
+                <p>Hey there! Thank you for checking out my personal blog for my travels. I'm slowly adding in details of my previous travels.
                     Feel free to join my mailing list where I send any updates of my travels: </p>
                 <div>
                     {subscribed ? <p>Thank you 💖 Look out for updates from me!</p> : <JoinForm subscribe={subscribe} />}
                 </div>
-                <button className="see-about" onClick={() => history.push('/about')}><BiDownArrow /></button>
+                <button style={{ marginTop: "4rem" }} className="see-about" onClick={() => history.push('/about')}><BiDownArrow /></button>
             </main>
         </>
     )
