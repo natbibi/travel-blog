@@ -36,10 +36,14 @@ body {
 #about {
     text-align: justify;
     align-items: center;
-    animation: intro-load ease-in 300ms;
+    animation: about-load ease-in 300ms;
 }
 
-@keyframes intro-load {
+#visited {
+    animation: visited-load ease-in 300ms;
+}
+
+@keyframes about-load {
     0% {
       transform: translateY(-400px);
       opacity: 0;
@@ -49,7 +53,19 @@ body {
       transform: translateY(0px);
       opacity: 1;
     }
-  }
+}
+
+@keyframes visited-load {
+    0% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+}
 
 main#photos {
     display: flex;
@@ -57,6 +73,7 @@ main#photos {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 2rem;
+    animation: intro-load ease-in 300ms;
 }
 
 h5, p {
@@ -107,19 +124,22 @@ form {
     margin-right: 0.5rem;
 }
 
-button.scroll-up, button.see-about {
+button.scroll-up, button.see-about, button.see-visited {
     cursor: pointer;
     font-size: 2rem;
     border: none;
     background: none;
     margin-bottom: 10px;
-    animation: hover-vertical 2s ease infinite;
     position: relative;
     color: rgb(131, 36, 255);
 }
 
-button.see-about {
-    margin-top: 4rem;
+button.scroll-up, button.see-about {
+    animation: hover-vertical 2s ease infinite;
+}
+
+button.see-visited {
+    animation: hover-horizontal 2s ease infinite;
 }
 
 @keyframes hover-vertical {
@@ -129,6 +149,16 @@ button.see-about {
   
     50% {
       top: 20px;
+    }
+}
+
+@keyframes hover-horizontal {
+    0%, 100% {
+      right: 0;
+    }
+  
+    50% {
+      right: 20px;
     }
 }
 
