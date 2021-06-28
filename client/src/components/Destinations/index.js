@@ -4,8 +4,8 @@ const Destinations = ({ destinationData }) => {
 
     return (
         <div className="img-container">
-            <h5>{destinationData.city}, {destinationData.country}</h5>
             <img className="destination" src={destinationData.image} />
+            <h5 style={{ textAlign: "center" }}>{destinationData.city}, {destinationData.country}</h5>
             
         </div>
     )
