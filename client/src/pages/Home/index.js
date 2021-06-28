@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <>
             <header className="intro-container">
-                <h1>Natalie's Travel Blog</h1>
+                <h1 hidden>Natalie's Travel Blog</h1>
             </header>
             <main className="main-container" id="homepage">
                 <p>Hey there! Thank you for checking out my personal blog for my travels. I'm slowly adding in details of my previous travels. 

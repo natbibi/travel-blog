@@ -29,7 +29,7 @@ const Photos = () => {
     return (
         <>
             <header className="intro-container">
-                <h1>Photos from my trips...</h1>
+                <h1>Take Only Memories 📷</h1>
             </header>
 
             <main id="photos"> 
