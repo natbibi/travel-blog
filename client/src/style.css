@@ -1,8 +1,12 @@
 /* font-family: 'Bad Script', cursive;
 font-family: 'Playfair Display', serif; */
 
+html,body{
+    margin:0;
+}
+
 body {
-    font-family: 'Playfair Display', serif
+    font-family: 'Playfair Display', serif;
 }
 
 .intro-container {
@@ -20,6 +24,7 @@ body {
     flex-direction: column;
     text-align: justify;
     align-items: center;
+    height: 70vh;
 }
 
 #homepage p {
@@ -30,6 +35,7 @@ body {
 
 #about {
     text-align: justify;
+    align-items: center;
 }
 
 main#photos {
@@ -54,9 +60,9 @@ h5, p {
 }
 
 img.profile {
-    max-width: 350px;
-    object-fit: scale-down;
+    width: 350px;
     height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
