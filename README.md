@@ -15,6 +15,9 @@ To start client:
     `npm run dev`  
 The client will open on port 8080   
 
+To run test suite for client:
+    `npm run test`  
+
 To start api (no longer in use):   
     `cd api`  
     `pipenv shell`  
@@ -52,6 +55,7 @@ Flask API will be running on port 5000
 - [x] deploy! 
 - [ ] improve landing page, make it more personal
 - [ ] add a favicon!
+- [ ] add test suite and tests 
 
 ## Bugs
 - [x] unable to set up flask-mail with my personal email account
@@ -83,3 +87,4 @@ Flask API will be running on port 5000
 
 ### Challenges
 - Took some time to understand flask-mail and using dotenv with Python
+- Set up for react testing 
