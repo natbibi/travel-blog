@@ -2,3 +2,4 @@ client/node_modules
 .DS_store
 .env
 data.js
+node_modules
