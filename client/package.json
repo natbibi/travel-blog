@@ -13,7 +13,8 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
@@ -36,7 +37,7 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "axios": "^0.21.1",
